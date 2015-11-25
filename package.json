@@ -1,0 +1,13 @@
+{
+  "name": "ol",
+  "version": "1.0.0",
+  "description": "MVC the simple way",
+  "main": "app.js",
+  "keywords": [
+    "MVC",
+    "API",
+    "Framework"
+  ],
+  "author": "Khalid REHIOUI <Array.prototype@gmail.com> (http://github.com/javascipt)",
+  "license": "MIT"
+}
