@@ -4,7 +4,7 @@ var filepath = require('./modules/filepath');
 var requirejson = require('./modules/require-json');
 
 module.exports = function (options) {
-    this.app = express();
+    var app = express();
     
     if(typeof options == "string") {
         options = requirejson(filepath(options));
@@ -19,5 +19,5 @@ module.exports = function (options) {
         app[route.method.toLowerCase()](route.route, controllers[route.controller][route.action]);
     });
     
-    return this;
+    return app;
 }

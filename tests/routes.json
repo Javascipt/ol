@@ -1,0 +1,20 @@
+[
+    {
+        "method" : "GET",
+        "route" : "/",
+        "controller" : "TestController",
+        "action" : "foo"
+    },
+    {
+        "method" : "GET",
+        "route" : "/test/:id",
+        "controller" : "TestController",
+        "action" : "bar"
+    },
+    {
+        "method" : "POST",
+        "route" : "/test2",
+        "controller" : "TestController",
+        "action" : "anotherAction"
+    }
+]
