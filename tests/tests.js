@@ -63,7 +63,7 @@ describe('Testing route with :param' , function () {
 });
 
 
-describe('Page not found route without :param' , function () {
+describe('Page not found' , function () {
     var code, body;
     
     beforeEach(function(done) {
@@ -77,5 +77,40 @@ describe('Page not found route without :param' , function () {
     it('should receive a 404 request (page not found)', function () {
         assert.equal(code, 404);
         assert.equal(body, 'Cannot GET /test\n');
+    });
+});
+
+
+describe('Testing route with POST method' , function () {
+    var code, body;
+    
+    beforeEach(function(done) {
+        request.post('http://localhost:1234/test2?email=test@test.com&pass=not_easy_at_all', function (error, response, responseBody) {
+            code = response.statusCode;
+            body = responseBody;
+            done();
+        })     
+    }); 
+    
+    it('should retourn a { id : 600 } object with a 200 status', function () {
+        assert.equal(code, 200);
+        assert.equal(body, '{"email":"test@test.com","pass":"not_easy_at_all"}');
+    });
+});
+
+describe('Testing route with POST method' , function () {
+    var code, body;
+    
+    beforeEach(function(done) {
+        request.post('http://localhost:1234/test2?email=test@test.com&pass=not_easy_at_all', function (error, response, responseBody) {
+            code = response.statusCode;
+            body = responseBody;
+            done();
+        })     
+    }); 
+    
+    it('should retourn a { id : 600 } object with a 200 status', function () {
+        assert.equal(code, 200);
+        assert.equal(body, '{"email":"test@test.com","pass":"not_easy_at_all"}');
     });
 });

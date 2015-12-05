@@ -8,6 +8,6 @@ module.exports = {
         res.json(req.params);
     },
     anotherAction : function (req, res) {
-        
+        res.json(req.query);
     }
 }
