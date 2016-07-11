@@ -3,6 +3,8 @@ Let's make it easy and simple !
 
 A simple http server built on top of express. This one makes it easy to create Rest APIs.
 
+![ol](https://travis-ci.org/Javascipt/ol.svg)
+
 ## Installation :
 
 ```bash
