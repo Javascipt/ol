@@ -33,7 +33,7 @@ To specify the path to routes file and controllers directory :
 
 The ol object is actually the express app, you just need to make it listen on a specific port :
 
-```
+``` javascript
     ol.listen('3000', function () {
         console.log(" Listening ... ! ");
     });
@@ -42,7 +42,7 @@ The ol object is actually the express app, you just need to make it listen on a 
 You also can pass the path to a json file to the `Ol` constructor. This file should contain the path to routes.json and the controllers directory.
 
 params.json :
-```
+``` javascript
     {
         "routes" : "./routes.json",
         "controllers" : "/ontrollers"
@@ -58,7 +58,7 @@ app.js :
 
 Example of routes.json:
 
-```
+``` javascript
     [
         {
             "method" : "GET",
@@ -77,7 +77,7 @@ Example of routes.json:
 
 Example of a controller (TestController)
 
-```
+``` javascript
     module.exports = {
         sayHi : function (req, res) {
             res.json({
